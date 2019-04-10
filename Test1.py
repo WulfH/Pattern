@@ -1,0 +1,33 @@
+from Pattern import Pattern
+import matplotlib.pyplot as plt
+
+test=Pattern(51,51)
+test.create("rand",10)
+test.mirror(0)
+test.mirror(1)
+A=test.get()
+test.evolve("cluster")
+B=test.get()
+test.evolve("cluster")
+C=test.get()
+test.evolve("cluster")
+D=test.get()
+test.evolve("cluster")
+E=test.get()
+test.evolve("cluster")
+F=test.get()
+
+plt.subplot(231)
+plt.imshow(A, cmap='hot', interpolation='nearest')
+plt.subplot(232)
+plt.imshow(B, cmap='hot', interpolation='nearest')
+plt.subplot(233)
+plt.imshow(C, cmap='hot', interpolation='nearest')
+plt.subplot(234)
+plt.imshow(D, cmap='hot', interpolation='nearest')
+plt.subplot(235)
+plt.imshow(E, cmap='hot', interpolation='nearest')
+plt.subplot(236)
+plt.imshow(F, cmap='hot', interpolation='nearest')
+plt.show()
+
